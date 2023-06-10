@@ -1,0 +1,97 @@
+
+
+
+.card{
+  position: relative;
+  width: 350px;
+  height: 250px;
+  background-color: #000;
+  overflow: hidden;
+}
+
+.card_image{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  scale: 1.15;
+  transition: opacity 0.25s,
+  scale 0.35s;
+}
+
+.card:hover .card_image{
+  opacity: 0.5;
+  scale: 1;
+}
+
+.card_body{
+  position: absolute;
+  inset: 0;
+  padding: 50px;
+  color: #fff;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 15px;
+  justify-content: center;
+}
+
+.card_body::before{
+  content: '';
+  position: absolute;
+  inset: 20px;
+  border: 2px solid #fff;
+  opacity: 0;
+  scale: 1.25;
+  transition: opacity 0.25s,
+  scale 0.25s;
+}
+
+.card:hover .card_body::before{
+  opacity: 1;
+  scale: 1;
+}
+
+.card_title{
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-shadow: 1px 1px 10px
+  rgba(0, 0, 0, .5);
+}
+
+.card_description{
+  font-size: 14px;
+  opacity: 0;
+  translate: -25px;
+  transition: opacity 0.25s,
+  translate 0.25s;
+}
+.card:hover .card_description{
+  opacity: 1;
+  translate: 0;
+}
+.card_login {
+  backdrop-filter: blur(19px) saturate(174%);
+  -webkit-backdrop-filter: blur(19px) saturate(174%);
+  background-color: rgba(17, 25, 40, 0.71);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.125); 
+
+  /*dobavi fon za stranicata login/register- nqkakva kartinka i sled tova izpolzvai tova*/
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
